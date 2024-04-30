@@ -15,7 +15,8 @@ Example 3:
 Input: nums = [1]
 Output: 1 
 */ 
- 
+
+/*
 import java.util.*;
 class Solution {
     public int singleNumber(int[] nums) {
@@ -44,5 +45,17 @@ class Solution {
     }
 
 }
-
+*/
 // Alternate Solution Using Bit manipulation XOR
+
+import java.util.*;
+class Solution {
+    public int SingleNumber(int[] nums){
+        int result = 0;
+
+        for(int i=0;i<nums.length;i++){
+            result ^=nums[i];
+        }
+        return result;
+    }
+}
