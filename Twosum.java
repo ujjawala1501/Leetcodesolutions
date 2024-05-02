@@ -12,6 +12,7 @@ Example 2:
 Input: nums = [3,2,4], target = 6
 Output: [1,2]
 */
+/*
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int n = nums.length;
@@ -23,5 +24,24 @@ class Solution {
             }
         }
         return new int[]{}; // No solution found
+    }
+}
+*/
+//ALTERNATE HASHMAP SOLUTION
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> numMap = new HashMap<>();
+        int n = nums.length;
+
+        for(int i=0;i<nums.length;i++){
+            int num2 = target-nums[i];
+            if(numMap.containsKey(num2)){
+                return new int[] {numMap.get(num2),i};
+            }
+            numMap.put(nums[i],i);
+        }
+
+        return new int[]{};
+
     }
 }
