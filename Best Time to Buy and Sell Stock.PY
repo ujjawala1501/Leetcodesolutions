@@ -19,6 +19,7 @@
 # Explanation: In this case, no transactions are done and the max profit = 0.
 
 #we will use Two pointer method to traverse through the array
+
 def maxProfit(prices):
     l,r = 0,1 #l=buy day,r=sell day
     maxp = 0 #sell-buy =difference should be max 
@@ -32,4 +33,3 @@ def maxProfit(prices):
         r+=1  # Regardless of the condition we are updating our right pointer
     return maxp
 maxProfit(prices = [7,1,5,3,6,4])
-        

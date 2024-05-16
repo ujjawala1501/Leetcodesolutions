@@ -28,6 +28,7 @@ class Solution {
 }
 */
 //ALTERNATE HASHMAP SOLUTION
+import java.util.*;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer,Integer> numMap = new HashMap<>();
