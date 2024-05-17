@@ -10,3 +10,14 @@ Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 Total profit is 4 + 3 = 7. 
 refer : https://www.youtube.com/watch?v=Q7v239y-Tik&t=11s
 */
+class Solution {
+    public int maxProfit(int[] prices) {
+        int profit =0 ;
+        for(int i=1;i<prices.length;i++){
+            if(prices[i]>prices[i-1]){
+                profit = profit + (prices[i] - prices[i-1]);
+            }
+        }
+        return profit;
+    }
+}
